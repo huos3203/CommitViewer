@@ -18,6 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		14632B951ECBFB1B00D4AE6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE22C35B14201769002E215F /* ObjectiveGitFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F879D8361B4B7F7C002D5C07;
+			remoteInfo = "ObjectiveGit-iOSTests";
+		};
 		AD51DD5116A2DCF6002BEEFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EE22C35B14201769002E215F /* ObjectiveGitFramework.xcodeproj */;
@@ -155,8 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				EE22C36B14201769002E215F /* ObjectiveGit.framework */,
-				EE22C36F14201769002E215F /* libObjectiveGit-iOS.a */,
 				AD51DD5216A2DCF6002BEEFA /* ObjectiveGitTests.octest */,
+				EE22C36F14201769002E215F /* libObjectiveGit-iOS.a */,
+				14632B961ECBFB1B00D4AE6A /* ObjectiveGit-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,10 +224,17 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		14632B961ECBFB1B00D4AE6A /* ObjectiveGit-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ObjectiveGit-iOSTests.xctest";
+			remoteRef = 14632B951ECBFB1B00D4AE6A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		AD51DD5216A2DCF6002BEEFA /* ObjectiveGitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = ObjectiveGitTests.octest;
+			path = "ObjectiveGit-MacTests.xctest";
 			remoteRef = AD51DD5116A2DCF6002BEEFA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -232,8 +247,8 @@
 		};
 		EE22C36F14201769002E215F /* libObjectiveGit-iOS.a */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libObjectiveGit-iOS.a";
+			fileType = wrapper.framework;
+			path = ObjectiveGit.framework;
 			remoteRef = EE22C36E14201769002E215F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -355,6 +370,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CommitViewer/Prefix.pch;
+				HEADER_SEARCH_PATHS = "objective-git/External/libgit2/include";
 				INFOPLIST_FILE = CommitViewer/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -367,6 +383,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CommitViewer/Prefix.pch;
+				HEADER_SEARCH_PATHS = "objective-git/External/libgit2/include";
 				INFOPLIST_FILE = CommitViewer/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

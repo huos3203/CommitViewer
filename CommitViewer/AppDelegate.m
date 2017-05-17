@@ -66,7 +66,9 @@
         // I should do more error checking but thsi is only an example project ;)
         GTRepository *repo = [GTRepository repositoryWithURL:[self repositoryURLForURL:panel.URL] error:NULL];
         GTReference *head = [repo headReferenceWithError:NULL];
-        self.commit = (GTCommit *)[repo lookupObjectBySha:[head target]  error:NULL];
+        self.commit = (GTCommit *)[repo lookUpObjectByOID:[head targetOID]  error:NULL];
+        //过时 接口
+        //        self.commit = (GTCommit *)[repo lookupObjectBySha:[head target]  error:NULL];
         
     }];
     
