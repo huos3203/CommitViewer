@@ -42,9 +42,7 @@ git submodule update --init --recursive
 3. Model key Path:输入类变量的名称。    
 ![](/images/NSTextFieldBindings.png)   
 4. 切换到 NSTextField／Delegate的Connections检查器面板,就会看到已经建立了关联：     
-![](/images/textFieldConections.png)   
-
-![](/images/delegatebinding.png)
+![](/images/textFieldConections.png)  ![](/images/delegatebinding.png)
 
 #### 依赖属性：
 [属性的依赖](https://github.com/huos3203/BookObjc/blob/master/publish/issue7/issue-7-3-DJBen.md#依赖的属性)
