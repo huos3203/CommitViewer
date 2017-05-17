@@ -69,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14632BA01ECC4E2F00D4AE6A /* readme_en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme_en.md; sourceTree = "<group>"; };
 		EE22C33914201226002E215F /* CommitViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE22C33D14201226002E215F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EE22C34014201226002E215F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -101,6 +102,7 @@
 		EE22C32E14201226002E215F = {
 			isa = PBXGroup;
 			children = (
+				14632BA01ECC4E2F00D4AE6A /* readme_en.md */,
 				EE22C35B14201769002E215F /* ObjectiveGitFramework.xcodeproj */,
 				EE22C34314201226002E215F /* CommitViewer */,
 				EE22C33C14201226002E215F /* Frameworks */,
@@ -162,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				EE22C36B14201769002E215F /* ObjectiveGit.framework */,
-				AD51DD5216A2DCF6002BEEFA /* ObjectiveGitTests.octest */,
-				EE22C36F14201769002E215F /* libObjectiveGit-iOS.a */,
+				AD51DD5216A2DCF6002BEEFA /* ObjectiveGit-MacTests.xctest */,
+				EE22C36F14201769002E215F /* ObjectiveGit.framework */,
 				14632B961ECBFB1B00D4AE6A /* ObjectiveGit-iOSTests.xctest */,
 			);
 			name = Products;
@@ -231,7 +233,7 @@
 			remoteRef = 14632B951ECBFB1B00D4AE6A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		AD51DD5216A2DCF6002BEEFA /* ObjectiveGitTests.octest */ = {
+		AD51DD5216A2DCF6002BEEFA /* ObjectiveGit-MacTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "ObjectiveGit-MacTests.xctest";
@@ -245,7 +247,7 @@
 			remoteRef = EE22C36A14201769002E215F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EE22C36F14201769002E215F /* libObjectiveGit-iOS.a */ = {
+		EE22C36F14201769002E215F /* ObjectiveGit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ObjectiveGit.framework;

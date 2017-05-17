@@ -24,7 +24,11 @@
 
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
     NSSet *keySet = [NSSet setWithObjects:@"commit", nil];
-    if ([key isEqualToString:@"messageTitle"] || [key isEqualToString:@"messageDetails"] || [key isEqualToString:@"author"] || [key isEqualToString:@"date"]) {
+    if ([key isEqualToString:@"messageTitle"] ||
+        [key isEqualToString:@"messageDetails"] ||
+        [key isEqualToString:@"author"] ||
+        [key isEqualToString:@"date"])
+    {
         return keySet;
     }
     return [super keyPathsForValuesAffectingValueForKey:key];
@@ -68,7 +72,7 @@
         GTReference *head = [repo headReferenceWithError:NULL];
         self.commit = (GTCommit *)[repo lookUpObjectByOID:[head targetOID]  error:NULL];
         //过时 接口
-        //        self.commit = (GTCommit *)[repo lookupObjectBySha:[head target]  error:NULL];
+        //self.commit = (GTCommit *)[repo lookupObjectBySha:[head target]  error:NULL];
         
     }];
     
