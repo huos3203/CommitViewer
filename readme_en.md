@@ -1,12 +1,13 @@
-### 环境配置
+在项目中使用git submodule工具集成子项目ObjectiveGit
+
+#### 在新项目中使用git submodule集成gitAPI   
+参考官方提供的两个demo
 * OS X: [CommitViewer](https://github.com/Abizern/CommitViewer)
 * iOS: [ObjectiveGit iOS Example](https://github.com/Raekye/ObjectiveGit-iOS-Example)
 
-1. 在项目中使用git submodule工具集成子项目ObjectiveGit:
-
 ```
 git submodule add https://github.com/libgit2/objective-git.git External/ObjectiveGit
-#如果之前配置过，直接更新：
+如果之前配置过，直接更新：
 git submodule update --init --recursive
 ```
 
