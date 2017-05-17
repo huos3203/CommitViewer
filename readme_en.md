@@ -1,17 +1,4 @@
----
-title: iOS和OSX集成gitAPI
-date: 创建时间
-updated: <#更新时间#>
-comments: true
-tags: [工具,管理]
-categories: Xcode
-keywords: 
-permalink: 
----
-
-参考文章：
-### Examples
-
+### 环境配置
 * OS X: [CommitViewer](https://github.com/Abizern/CommitViewer)
 * iOS: [ObjectiveGit iOS Example](https://github.com/Raekye/ObjectiveGit-iOS-Example)
 
@@ -32,21 +19,21 @@ git submodule update --init --recursive
 *  It's hard to tell the difference between the platforms, but the Mac framework is in `build/Debug` whereas the iOS framework is in `build/Debug-iphoneos`
 1. Don't forget to `#import <ObjectiveGit/ObjectiveGit.h>` or `@import ObjectiveGit;` as you would with any other framework.
 
-### 详解CommitViewer样例要点
-
-#### 类变量关联.xib控件text值：在OSX中设置控件的Bindings代替IBOutlet 
-[参考](http://stackoverflow.com/questions/8161012/referencing-bindings-in-connections-inspector)   
-
+### 知识点
+1. 类变量关联.xib控件text值    
+2. 字体样式菜单来改变字体样式    
+#### 在OSX中设置控件的Bindings代替IBOutlet  
+1. 类变量关联.xib控件text值  
+[参考](http://stackoverflow.com/questions/8161012/referencing-bindings-in-connections-inspector)      
 1. 选中NSTextField的bindings检查器面板：   
 2. 在`value`单元内设置bind to 的值，通过下拉框选中 `Delegate`      
 3. Model key Path:输入类变量的名称。    
 ![](/images/NSTextFieldBindings.png)   
 4. 切换到 NSTextField／Delegate的Connections检查器面板,就会看到已经建立了关联：     
-![](/images/textFieldConections.png)  ![](/images/delegatebinding.png)
-
-#### 依赖属性：
-[属性的依赖](https://github.com/huos3203/BookObjc/blob/master/publish/issue7/issue-7-3-DJBen.md#依赖的属性)
+![](/images/textFieldConections.png)   ![](/images/delegatebinding.png)   
+2. 依赖属性
 Foundation 框架提供的表示属性依赖的机制如下：
+参考[属性的依赖](https://github.com/huos3203/BookObjc/blob/master/publish/issue7/issue-7-3-DJBen.md#依赖的属性)
 ```objc
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key
 
@@ -71,7 +58,7 @@ return [super keyPathsForValuesAffectingValueForKey:key];
 ```
 
 
-### 实现字体样式菜单来改变字体样式   
+#### 实现字体样式菜单来改变字体样式   
 1. 在xib中拖一个Object并设置为NSFontManager.h类的实现。   
 2. 选中NSFontManager.h的connections面板，将Received Actions关联到对应的菜单项即可  
 ![](/images/fontManage.png)
