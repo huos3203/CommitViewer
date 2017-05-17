@@ -20,18 +20,22 @@ git submodule update --init --recursive
 1. Don't forget to `#import <ObjectiveGit/ObjectiveGit.h>` or `@import ObjectiveGit;` as you would with any other framework.
 
 ### 知识点
-1. 类变量关联.xib控件text值    
-2. 字体样式菜单来改变字体样式    
+* 类变量关联.xib控件text值    
+* 字体样式菜单来改变字体样式    
 #### 在OSX中设置控件的Bindings代替IBOutlet  
-1. 类变量关联.xib控件text值  
-[参考](http://stackoverflow.com/questions/8161012/referencing-bindings-in-connections-inspector)      
-1. 选中NSTextField的bindings检查器面板：   
+
+先关联再使用属性依赖特性来同步数据
+
+##### 类变量关联.xib控件text值  
+[相关参考](http://stackoverflow.com/questions/8161012/referencing-bindings-in-connections-inspector)      
+1. 选中NSTextField的bindings检查器面板   
 2. 在`value`单元内设置bind to 的值，通过下拉框选中 `Delegate`      
 3. Model key Path:输入类变量的名称。    
 ![](/images/NSTextFieldBindings.png)   
 4. 切换到 NSTextField／Delegate的Connections检查器面板,就会看到已经建立了关联：     
 ![](/images/textFieldConections.png)   ![](/images/delegatebinding.png)   
-2. 依赖属性
+
+##### 依赖属性
 Foundation 框架提供的表示属性依赖的机制如下：
 参考[属性的依赖](https://github.com/huos3203/BookObjc/blob/master/publish/issue7/issue-7-3-DJBen.md#依赖的属性)
 ```objc
