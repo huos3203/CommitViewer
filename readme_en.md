@@ -2,7 +2,8 @@
 
 #### 在新项目中使用git submodule集成gitAPI   
 参考官方提供的两个demo
-* OS X: [CommitViewer](https://github.com/Abizern/CommitViewer)
+* OS X: [CommitViewer](https://github.com/Abizern/CommitViewer)   
+![](/images/ObjectiveGitxiaoguo.png)    
 * iOS: [ObjectiveGit iOS Example](https://github.com/Raekye/ObjectiveGit-iOS-Example)
 
 ```
